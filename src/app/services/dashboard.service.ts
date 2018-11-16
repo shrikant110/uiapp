@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http, Headers, RequestOptions,Response} from '@angular/http';
 import {User} from "../model/model.user";
 import 'rxjs/add/operator/map';
-import {AppComponent} from "../app.component";
+import {environment} from "../../environments/environment";
 
 @Injectable()
 export class DashboardService {
@@ -11,14 +11,14 @@ export class DashboardService {
 
   
   getUserName() {
-    return this.http.get(AppComponent.API_URL+"/account/username",{withCredentials: true})
+    return this.http.get(environment.API_URL+"/account/username",{withCredentials: true})
       .map((response: Response) => {
        
       });
   }
 
   getLogginUser() {
-    return this.http.get(AppComponent.API_URL+"/account/cusername",{withCredentials: true})
+    return this.http.get(environment.API_URL+"/account/cusername",{withCredentials: true})
       .map((response: Response) => {
         
       });
@@ -26,7 +26,7 @@ export class DashboardService {
   
   
   getModules() {
-    return this.http.get(AppComponent.API_URL+"/dashboard/getmodules",{withCredentials: true})
+    return this.http.get(environment.API_URL+"/dashboard/getmodules",{withCredentials: true})
       .map((response: Response) => {
        
       });

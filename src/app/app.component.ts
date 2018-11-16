@@ -7,6 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Avova';
-  static API_URL="http://54.254.162.151:8080";
   dateTime=new Date();
 }
