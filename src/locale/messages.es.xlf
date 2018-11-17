@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="5459cfa83a3ee101bf4d10105601890628112dff" datatype="html">
+        <source>Username</source>
+        <target>nombre de usuario</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\login\login.component.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <note priority="1" from="description">Lebel for username</note>
+        <note priority="1" from="meaning">login box username</note>
+      </trans-unit>
+      <trans-unit id="950b80f8afd6b6c26b97842088e3c2dd3a7e741e" datatype="html">
+        <source>Password</source>
+        <target>Contraseña</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\login\login.component.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <note priority="1" from="description">Lebel for password</note>
+        <note priority="1" from="meaning">login box password</note>
+      </trans-unit>
+      <trans-unit id="cd509c7292259e7ba47e0e356028506c405b456d" datatype="html">
+        <source>Sign in</source>
+        <target>Registrarse</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\components\login\login.component.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <note priority="1" from="description">Lebel for loginbutton</note>
+        <note priority="1" from="meaning">login box login</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
