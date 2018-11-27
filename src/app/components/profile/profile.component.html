@@ -4,11 +4,13 @@
 
     <ul class="nav navbar-nav">
       <li class="active"  ><a>Home</a></li>
-
+      <li><button class="glyphicon glyphicon-log-in" (click)="getDashboardodule()"> Dashboard </button></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
 
       <li><button class="glyphicon glyphicon-log-in" (click)="logOut()"> LogOut </button></li>
+
+      
     </ul>
   </div>
 </nav>
@@ -17,7 +19,7 @@
 
   <!-- Jumbotron Header -->
   <header class="jumbotron my-4">
-    <h1 class="display-3">  <strong>{{currentUser.fullName}}</strong>, Welcome to your app </h1>
+    <h1 class="display-3">  <strong>{{currentUser.Data.fullName}}</strong>, Welcome to your app </h1>
     <p class="lead"> welcome to your profile
     </p>
     <div class="row">
