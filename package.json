@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --host 192.168.2.73",
+    "start": "ng serve --host localhost",
     "start:es": "ng serve --aot --i18nFile=src/locale/messages.es.xlf --i18nFormat=xlf --locale es",
     "build": "ng build --prod --aot --i18nFile=src/locale/messages.es.xlf --i18nFormat=xlf --locale es",
     "test": "ng test",
@@ -14,7 +14,7 @@
   "private": true,
   "dependencies": {
     "@amcharts/amcharts3-angular": "github:amcharts/amcharts3-angular2",
-    "@angular/animations": "^5.0.0",
+    "@angular/animations": "^5.0.0", 
     "@angular/common": "^5.0.0",
     "@angular/compiler": "^5.0.0",
     "@angular/core": "^5.0.0",

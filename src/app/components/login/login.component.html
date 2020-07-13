@@ -12,12 +12,12 @@
       <span id="reauth-email" class="reauth-email"></span>
       <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
         <label for="username" i18n="login box username|Lebel for username">Username</label>
-        <input type="text" class="form-control" id="username" name="username" pattern="[^ @]*@[^ @]*" [(ngModel)]="user.username" #username="ngModel" required />
+        <input type="text" class="form-control" id="username" name="username" pattern="[^ @]*@[^ @]*" [(ngModel)]="user.UserName" #username="ngModel" required />
         <div *ngIf="f.submitted && !username.valid" class="help-block">an valid email is required</div>
       </div>
       <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
         <label for="password" i18n="login box password|Lebel for password">Password</label>
-        <input type="password" class="form-control" id="password" name="password" [(ngModel)]="user.password" #password="ngModel" required />
+        <input type="password" class="form-control" id="password" name="password" [(ngModel)]="user.PassCode" #password="ngModel" required />
         <div *ngIf="f.submitted && !password.valid" class="help-block">Password is required</div>
       </div>
       <div id="remember" class="checkbox">

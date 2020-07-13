@@ -19,7 +19,12 @@ export class LoginComponent implements OnInit {
   }
 
   login(){
-    this.authService.authenticate(this.user)
+    const loginModel = {
+      UserName: this.user.UserName,
+      Password: this.user.PassCode,
+      'remember-me': true,
+     };
+    this.authService.logIn(loginModel)
       .subscribe(data=>{
           console.info("I am here ====>"+JSON.stringify(data));
           localStorage.setItem("currentUser",JSON.stringify(data));
