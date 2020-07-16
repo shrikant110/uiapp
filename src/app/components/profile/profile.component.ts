@@ -17,6 +17,12 @@ import {environment} from "../../../environments/environment";
 export class ProfileComponent implements OnInit {
   uploadNew:boolean=false;
   currentUser: User;
+  nameVal:any="";
+  addressVal:any="";
+  cityVal:any="";
+  countryVal:any="";
+  emailVal:any="";
+  contactVal:any="";
   constructor(public authService: AuthService, public router: Router,public dashboard:DashboardService,public http: HttpClient) {
     this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
      this.dashboard.getModules() ;
@@ -61,6 +67,10 @@ export class ProfileComponent implements OnInit {
   }
   uploadNewHide(){
     this.uploadNew=false;
+  }
+
+  changeVal(val){
+    console.log("val-"+val);
   }
 
 }

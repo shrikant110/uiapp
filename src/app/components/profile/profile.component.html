@@ -582,13 +582,22 @@
         <button type="button" class="close ab" data-dismiss="modal" aria-label="Close" (click)="uploadNewHide()"><span aria-hidden="true">&times;</span></button>
           <div class="discount">
             <h3>Add New Card</h3>
-              <form action="#" method="post">
-                <input type="file" name="fileupload" class="fileupload" placeholder="File Upload" required="">
-                <input type="submit" value="Scan Image">
-              </form>
+
           </div>
       </div>
        <div class="modal-body about">
+         <div class="uploadSec">
+          <form action="#" method="post">
+            <div class="col-md-6 col-sm-6 pull-left">
+              <input type="file" name="fileupload" class="fileupload" placeholder="File Upload" required="">
+            </div>
+            <div class="col-md-6 col-sm-6 pull-left">
+              <input type="submit" value="Scan Image" class="pull-right btn btn-primary btn-sm">
+            </div>
+
+
+          </form>
+        </div>
 
           <div class="dis-contact">
             <h4>Scan Result</h4>
@@ -610,7 +619,8 @@
                         <tr>
                           <td>Feched Result</td>
                           <td>
-                            <select class="name active">
+                            <select class="name active" [(ngModel)]="nameVal" name="name" (change)="changeVal(nameVal)">
+                              <option value="">select</option>
                               <option>name1</option>
                               <option>name1</option>
                               <option>name1</option>
@@ -618,7 +628,8 @@
                             </select>
                           </td>
                           <td>
-                            <select class="name active">
+                            <select class="name active" name="address" [(ngModel)]="addressVal">
+                              <option value="">select</option>
                               <option>Address</option>
                               <option>Address</option>
                               <option>Address</option>
@@ -626,7 +637,8 @@
                             </select>
                           </td>
                           <td>
-                            <select class="name active">
+                            <select class="name active" name="city" [(ngModel)]="cityVal">
+                              <option value="">select</option>
                               <option>city</option>
                               <option>city</option>
                               <option>city</option>
@@ -634,14 +646,17 @@
                             </select>
                           </td>
                           <td>
-                            <select class="name active">
+                            <select class="name active" name="country" [(ngModel)]="countryVal">
+                              <option value="">select</option>
                               <option>Country</option>
                               <option>Country</option>
                               <option>Country</option>
                               <option>Country</option>
                             </select>
                           </td>
-                          <td><select class="name active">
+                          <td>
+                            <select class="name active" name="contact" [(ngModel)]="contactVal">
+                            <option value="">select</option>
                             <option>contact</option>
                             <option>contact</option>
                             <option>contact</option>
@@ -649,7 +664,8 @@
                           </select>
                         </td>
                           <td>
-                            <select class="name active">
+                            <select class="name active" name="email" [(ngModel)]="emailVal">
+                              <option value="">select</option>
                               <option>email</option>
                               <option>email</option>
                               <option>email</option>
@@ -659,12 +675,13 @@
                         </tr>
                         <tr>
                           <td>Selected</td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
+                          <td>{{nameVal}}</td>
+                          <td>{{addressVal}}</td>
+                          <td>{{cityVal}}</td>
+                          <td>{{countryVal}}</td>
+                          <td>{{contactVal}}</td>
+                          <td>{{emailVal}}</td>
+
                         </tr>
                       </tbody>
                     </table>
