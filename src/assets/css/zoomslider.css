@@ -363,7 +363,7 @@ input#searchMega{
 		outline: none;
 		font-size: 12px;
 		margin-bottom: 0;
-		background: url(../images/car.png) no-repeat 6% center #ffffff;
+		/* background: url(../images/car.png) no-repeat 6% center #ffffff; */
 	}
 	.section_room select {
 		border-left: 1px solid #999!important;
