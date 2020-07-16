@@ -6,6 +6,7 @@
            <div class="logo-info"><h1><a href="index.html">Catchy <span class="logo-sub">Directory</span> </a></h1></div>
         <!-- //header-left -->
                <div class="search-box">
+                <input type="submit" value="Upload New Card"  (click)="uploadNewShow()">
 
           <div id="sb-search" class="sb-search" style="display:none">
             <form action="#" method="post">
@@ -22,7 +23,7 @@
             <li style="display:none">
             <a href="#" data-toggle="modal" data-target="#myModal4"><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>Select Your Location</a></li>
 
-            <li ><button id="showRight" class="navig">Login </button>
+            <li style="display:none"><button id="showRight" class="navig">Login </button>
              <div class="cbp-spmenu-push">
             <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
               <h3>Login</h3>
@@ -96,51 +97,7 @@
       <!--//banner-info-->
   </div>
 </div>
-<!-- discounts-->
-    <div class="modal ab fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog about" role="document">
-        <div class="modal-content about">
-          <div class="modal-header">
-            <button type="button" class="close ab" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <div class="discount">
-                <h3>Get Offers & Discount of</h3>
-                <p>Catchy Carz Brand VL in New York</p>
-                  <form action="#" method="post">
-                    <select id="country5" onchange="change_country(this.value)" class="frm-field required">
-                      <option selected="selected" value="-1">-Buying Time Period-</option>
-                      <option value="0">Just Researching</option>
-                      <option value="7">1 Week</option>
-                      <option value="14">2 Weeks</option>
-                      <option value="30">1 Month</option>
-                      <option value="60">2 Months</option>
-                    </select>
-                    <input type="text" name="pin code" class="Pin code" placeholder="Pin code" required="">
-                  </form>
-              </div>
-          </div>
-           <div class="modal-body about">
 
-              <div class="dis-contact">
-                <h4>Contact Information</h4>
-                      <form action="#" method="post">
-                        <input type="text" name="name" class="name active" placeholder="Name" required="">
-                        <input type="text" name="email" class="email" placeholder="Email" required="">
-                        <input type="text" name="phone" class="phone" placeholder="Phone" required="">
-                        <div class="d-c">
-                          <span class="checkbox1">
-                            <label class="checkbox"><input type="checkbox" name="" checked=""><i> </i>I agree to Terms and Conditions.</label>
-                          </span>
-
-                        </div>
-                        <input type="submit" value="Find Offers">
-
-                        </form>
-              </div>
-           </div>
-        </div>
-      </div>
-    </div>
-    <!-- //discounts-->
       <!-- //sign-up-->
       <div class="modal ab fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog sign" role="document">
@@ -236,7 +193,7 @@
 <!--/featured_section-->
 <div class="featured_section_w3l">
   <div class="container">
-        <h3 class="tittle">FEATURED CARS</h3>
+        <h3 class="tittle">Search Results</h3>
                <div class="inner_tabs">
   <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
           <!-- <ul id="myTab" class="nav nav-tabs" role="tablist">
@@ -614,3 +571,42 @@
 </div>
 
 
+
+
+
+<!-- discounts-->
+<div class="modal ab" id="myModal1"  style="display:block"  *ngIf="uploadNew">
+  <div class="modal-dialog about" role="document">
+    <div class="modal-content about">
+      <div class="modal-header">
+        <button type="button" class="close ab" data-dismiss="modal" aria-label="Close" (click)="uploadNewHide()"><span aria-hidden="true">&times;</span></button>
+          <div class="discount">
+            <h3>Add New</h3>
+              <form action="#" method="post">
+                <input type="file" name="fileupload" class="fileupload" placeholder="File Upload" required="">
+              </form>
+          </div>
+      </div>
+       <div class="modal-body about">
+
+          <div class="dis-contact">
+            <h4>Contact Information</h4>
+                <form action="#" method="post">
+                  <input type="text" name="name" class="name active" placeholder="Name" required="">
+                  <input type="text" name="email" class="email" placeholder="Email" required="">
+                  <input type="text" name="phone" class="phone" placeholder="Phone" required="">
+                  <div class="d-c">
+                    <span class="checkbox1">
+                      <label class="checkbox"><input type="checkbox" name="" checked=""><i> </i>I agree to Terms and Conditions.</label>
+                    </span>
+
+                  </div>
+                  <input type="submit" value="Find Offers">
+
+                  </form>
+          </div>
+       </div>
+    </div>
+  </div>
+</div>
+<!-- //discounts-->

@@ -1,9 +1,4 @@
-/*--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
---*/
+
 html, body{
     font-size: 100%;
 	font-family: 'Open Sans', sans-serif;
@@ -41,6 +36,7 @@ input[type="submit"],.w3l_header_left ul li a,.related-post-right h4 a,.comments
 	-o-transition: .5s ease-in;
 	-ms-transition: .5s ease-in;
 }
+.modal{background: rgba(0,0,0,0.2);}
 .w3l_header_left{
 	float:left;
 	margin: .3em 0 0;
@@ -545,7 +541,7 @@ label.checkbox {
 .login-top input.password {
     background: url(../images/l3.png) no-repeat 0% 51%;
 }
-.login-top input[type="text"]:hover, ..login-top input[type="password"]:hover{
+.login-top input[type="text"]:hover, .login-top input[type="password"]:hover{
     border-bottom-color:rgba(132, 141, 215, 0.52);
 }
 /*--checkbox--*/
@@ -3110,7 +3106,7 @@ ul.cars-list {
 
 .year input[type="number"], .kms input[type="number"], .pincode input[type="number"], .price input[type="number"] {
 	    height: 39px;
-    width: 220px
+    width: 220px;
 	outline:none;
 }
 
@@ -6418,7 +6414,7 @@ p.free {
 		width: 100%;
 	}
 	.search-box {
-		float: none;
+		float: right;width:45%;
 	}
 	.search-box	ul li, .search-box	ul li a {
 		display: inline-block;
@@ -6430,7 +6426,9 @@ p.free {
 	}
 	.search-box ul {
 		margin-left: 18%;
-	}
+  }
+
+
 	ul.cars-list h5 {
 		font-size: 0.9em;
 	}
@@ -7325,3 +7323,15 @@ p.free {
 	}
 }
 /*-- //responsive --*/
+
+
+.search-box input[type="submit"] {
+  outline: none;
+  padding: 10px 15px;
+  background: #EFC509;
+  border: none;
+  font-size: 0.95em;
+  color: #fff;
+  margin-left: 0em;
+  float: left;
+}

@@ -15,25 +15,26 @@ import {environment} from "../../../environments/environment";
   encapsulation: ViewEncapsulation.None
 })
 export class ProfileComponent implements OnInit {
+  uploadNew:boolean=false;
   currentUser: User;
   constructor(public authService: AuthService, public router: Router,public dashboard:DashboardService,public http: HttpClient) {
     this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
      this.dashboard.getModules() ;
-    
+
 
       this.dashboard.getUserName() ;
-     
+
 
       this.dashboard.getLogginUser();
 
   }
 
   getDashboardodule(){
-    
+
     this.http.get(environment.API_URL+"/dashboard/getmodules",{withCredentials: true}).subscribe(res => {
       console.info("getModules"+res)
-     
-    }); 
+
+    });
 
   }
 
@@ -50,8 +51,16 @@ export class ProfileComponent implements OnInit {
           console.info("logOut---->finish");
           this.router.navigate(['login']);
     });
-  
-    
-  } 
-  
+
+
+  }
+
+
+  uploadNewShow(){
+    this.uploadNew=true;
+  }
+  uploadNewHide(){
+    this.uploadNew=false;
+  }
+
 }

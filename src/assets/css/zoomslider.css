@@ -294,7 +294,7 @@ input#searchMega{
 /*-- /responsive --*/
 @media (max-width:1440px){
 	#demo-1 {
-		min-height: 550px;
+		min-height: 600px;
 	}
 	.zs-enabled .zs-slideshow .zs-bullets {
 		position: absolute;
