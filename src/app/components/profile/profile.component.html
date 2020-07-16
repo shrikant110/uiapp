@@ -1,38 +1,616 @@
+<!--/banner-section-->
+<div id="demo-1" data-zs-src='["../../../assets/images//2.jpg"]' data-zs-overlay="dots">
+  <div class="demo-inner-content">
+     <div class="header-top">
+      <!-- /header-left -->
+           <div class="logo-info"><h1><a href="index.html">Catchy <span class="logo-sub">Directory</span> </a></h1></div>
+        <!-- //header-left -->
+               <div class="search-box">
 
-<nav  class="navbar navbar-inverse">
-  <div class="container-fluid">
+          <div id="sb-search" class="sb-search" style="display:none">
+            <form action="#" method="post">
+              <input name="name" class="sb-search-input" placeholder="Enter your search term..." type="search" id="search">
+              <input class="sb-search-submit" type="submit" value="">
+              <span class="sb-icon-search"> </span>
+            </form>
+          </div>
+          <!-- search-scripts -->
 
-    <ul class="nav navbar-nav">
-      <li class="active"  ><a>Home</a></li>
-      <li><button class="glyphicon glyphicon-log-in" (click)="getDashboardodule()"> Dashboard </button></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
+          <!-- //search-scripts -->
+            <ul>
 
-      <li><button class="glyphicon glyphicon-log-in" (click)="logOut()"> LogOut </button></li>
+            <li style="display:none">
+            <a href="#" data-toggle="modal" data-target="#myModal4"><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>Select Your Location</a></li>
 
-      
-    </ul>
+            <li ><button id="showRight" class="navig">Login </button>
+             <div class="cbp-spmenu-push">
+            <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
+              <h3>Login</h3>
+            <div class="login-inner">
+              <div class="login-top">
+               <form action="#" method="post">
+                <input type="text" name="email" class="email" placeholder="Email" required=""/>
+                <input type="password" name="password" class="password" placeholder="Password" required=""/>
+                <input type="checkbox" id="brand" value="">
+                <label for="brand"><span></span> Remember me</label>
+              </form>
+              <div class="login-bottom">
+                <ul>
+                  <li>
+                    <a href="#">Forgot password?</a>
+                  </li>
+                  <li>
+                    <form action="#" method="post">
+                      <input type="submit" value="LOGIN"/>
+                    </form>
+                  </li>
+                </ul>
+                <div class="clearfix"></div>
+              </div>
+              <div class="clearfix"></div>
+
+            </div>
+            <div class="social-icons">
+            <ul>
+              <li><a href="#"><span class="icons"></span><span class="text">Facebook</span></a></li>
+              <li class="twt"><a href="#"><span class="icons"></span><span class="text">Twitter</span></a></li>
+              <li class="ggp"><a href="#"><span class="icons"></span><span class="text">Google+</span></a></li>
+            </ul>
+          </div>
+            </div>
+            </nav>
+          </div>
+
+          <!--Navigation from Right To Left-->
+              </li>
+          </ul>
+
+        </div>
+
+          <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+      <!--banner-info-->
+    <div class="banner-info">
+      <!-- <h1><a href="index.html">Catchy <span class="logo-sub">Carz</span> </a></h1> -->
+        <h2><span>SEARCH IN </span> <span>DIRECTORY </span></h2>
+      <!-- <p>Eye it – try it – buy it!</p> -->
+           <form action="#" method="post">
+        <div class="search-two">
+        <select id="country" onchange="change_country(this.value)" class="frm-field required">
+            <option value="abt">Name</option>
+            <option value="acura">Contact</option>
+            <option value="alfa romeo">City</option>
+            <option value="arial">Country</option>
+            <option value="armstrong siddeley">E-mail</option>
+        </select>
+      </div>
+      <div class="section_room">
+        <input type="text" id="searchMega" class="frm-field required" placeholder="Search here">
+      </div>
+
+        <input type="submit" value="Search">
+        <div class="clearfix"></div>
+      </form>
+    </div>
+      <!--//banner-info-->
   </div>
-</nav>
+</div>
+<!-- discounts-->
+    <div class="modal ab fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog about" role="document">
+        <div class="modal-content about">
+          <div class="modal-header">
+            <button type="button" class="close ab" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <div class="discount">
+                <h3>Get Offers & Discount of</h3>
+                <p>Catchy Carz Brand VL in New York</p>
+                  <form action="#" method="post">
+                    <select id="country5" onchange="change_country(this.value)" class="frm-field required">
+                      <option selected="selected" value="-1">-Buying Time Period-</option>
+                      <option value="0">Just Researching</option>
+                      <option value="7">1 Week</option>
+                      <option value="14">2 Weeks</option>
+                      <option value="30">1 Month</option>
+                      <option value="60">2 Months</option>
+                    </select>
+                    <input type="text" name="pin code" class="Pin code" placeholder="Pin code" required="">
+                  </form>
+              </div>
+          </div>
+           <div class="modal-body about">
 
-<div class="container">
+              <div class="dis-contact">
+                <h4>Contact Information</h4>
+                      <form action="#" method="post">
+                        <input type="text" name="name" class="name active" placeholder="Name" required="">
+                        <input type="text" name="email" class="email" placeholder="Email" required="">
+                        <input type="text" name="phone" class="phone" placeholder="Phone" required="">
+                        <div class="d-c">
+                          <span class="checkbox1">
+                            <label class="checkbox"><input type="checkbox" name="" checked=""><i> </i>I agree to Terms and Conditions.</label>
+                          </span>
 
-  <!-- Jumbotron Header -->
-  <header class="jumbotron my-4">
-    <h1 class="display-3">  <strong>{{currentUser.Data.fullName}}</strong>, Welcome to your app </h1>
-    <p class="lead"> welcome to your profile
-    </p>
-    <div class="row">
+                        </div>
+                        <input type="submit" value="Find Offers">
+
+                        </form>
+              </div>
+           </div>
+        </div>
+      </div>
+    </div>
+    <!-- //discounts-->
+      <!-- //sign-up-->
+      <div class="modal ab fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog sign" role="document">
+        <div class="modal-content about">
+          <div class="modal-header one">
+            <button type="button" class="close sg" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <div class="discount one">
+                <h3>Sign Up</h3>
+
+              </div>
+          </div>
+           <div class="modal-body about">
+              <div class="login-top sign-top one">
+               <form action="#" method="post">
+                <input type="text" name="name" class="name active" placeholder="Your Name" required="">
+                <input type="text" name="email "class="email" placeholder="Email" required="">
+                <input type="password" name="password" class="password" placeholder="Password" required="">
+                <input type="checkbox" id="brand1" value="">
+                <label for="brand1"><span></span> Remember me?</label>
+                <div class="login-bottom one">
+                <ul>
+                  <li>
+                    <a href="#">Forgot password?</a>
+                  </li>
+                  <li>
+
+                    <input type="submit" value="SIGN UP">
+
+                  </li>
+                <div class="clearfix"></div>
+              </ul>
+              </div>
+              </form>
+
+            </div>
 
 
-      <app-am-charts></app-am-charts>
+           </div>
+           <div class="social-icons">
+                <ul>
+                  <li><a href="#"><span class="icons"></span><span class="text">Facebook</span></a></li>
+                  <li class="twt"><a href="#"><span class="icons"></span><span class="text">Twitter</span></a></li>
+                  <li class="ggp"><a href="#"><span class="icons"></span><span class="text">Google+</span></a></li>
+                </ul>
+                </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- //sign-up-->
+      <!-- /location-->
+      <div class="modal ab fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog sign" role="document">
+        <div class="modal-content about">
+          <div class="modal-header one">
+            <button type="button" class="close sg" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <div class="discount one">
+                <h3>Please Tell Us Your City</h3>
+
+              </div>
+          </div>
+           <div class="modal-body about">
+              <div class="login-top sign-top location">
+               <form action="#" method="post">
+                            <select id="country12" onchange="change_country(this.value)" class="frm-field required">
+                          <option value="null"> Select City</option>
+                          <option value="city">Amsterdam</option>
+                          <option value="city">Bahrain</option>
+                          <option value="city">Cannes</option>
+                          <option value="city">Dublin</option>
+                          <option value="city">Edinburgh</option>
+                          <option value="city">Florence</option>
+                          <option value="city">Georgia</option>
+                          <option value="city">Hungary</option>
+                          <option value="city">Hong Kong</option>
+                          <option value="city">Johannesburg</option>
+                          <option value="city">Kiev</option>
+                          <option value="city">London</option>
+                          <option value="city">Others...</option>
+                  </select>
+              </form>
+                 </div>
+
+
+           </div>
+
+
+        </div>
+      </div>
+    </div>
+    <!-- //location-->
+<!--//banner-section-->
+<!--/featured_section-->
+<div class="featured_section_w3l">
+  <div class="container">
+        <h3 class="tittle">FEATURED CARS</h3>
+               <div class="inner_tabs">
+  <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+          <!-- <ul id="myTab" class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#expeditions" id="expeditions-tab" role="tab" data-toggle="tab" aria-controls="expeditions" aria-expanded="true">UpComing cars</a></li>
+            <li role="presentation"><a href="#tours" role="tab" id="tours-tab" data-toggle="tab" aria-controls="tours">Popular</a></li>
+            <li role="presentation"><a href="#tree" role="tab" id="tree-tab" data-toggle="tab" aria-controls="tree">Just Launched</a></li>
+
+          </ul> -->
+          <div id="myTabContent" class="tab-content">
+            <div role="tabpanel" class="tab-pane fade in active" id="expeditions" aria-labelledby="expeditions-tab">
+               <div class="section__content clearfix">
+               <!-- /card1 -->
+                <div class="card">
+                <div class="card__front">
+                  <span class="card__text">
+                       <div class="img-grid">
+                        <img src="../../../assets/images/f1.jpg" alt="Catchy Carz">
+                        <div class="car_description">
+                           <h4><a href="single.html">Mercedes-Benz C250 CDI</a></h4>
+                           <div class="price"><span class="fa fa-rupee"></span><span class="font25">$ 8000 - $ 12000</span></div>
+                           <p>Estimated Price</p>
+                           <div class="date">Mar 2017</div>
+                           <p>Expected Launch</p>
+                          </div>
+
+                        </div>
+                  </span>
+                </div>
+                </div>
+                  <!-- //card1 -->
+                <!-- /card2 -->
+                <div class="card">
+                <div class="card__front">
+                  <span class="card__text">
+                       <div class="img-grid">
+                        <img src="../../../assets/images/f2.jpg" alt="Catchy Carz">
+                        <div class="car_description">
+                           <h4><a href="single.html">Audi A4 2.0 TDI</a></h4>
+                           <div class="price"><span class="fa fa-rupee"></span><span class="font25">$ 6000 - $ 10000</span></div>
+                           <p>Estimated Price</p>
+                           <div class="date">Mar 2017</div>
+                           <p>Expected Launch</p>
+                          </div>
+
+                        </div>
+                  </span>
+                </div>
+                </div>
+                  <!-- //card2 -->
+                <!-- /card3 -->
+                <div class="card">
+                <div class="card__front">
+                  <span class="card__text">
+                       <div class="img-grid">
+                        <img src="../../../assets/images/f3.jpg" alt="Catchy Carz">
+                        <div class="car_description">
+                           <h4><a href="single.html">Foed Mustang GT 500</a></h4>
+                           <div class="price"><span class="fa fa-rupee"></span><span class="font25">$ 9000 - $ 12000</span></div>
+                           <p>Estimated Price</p>
+                           <div class="date">Mar 2017</div>
+                           <p>Expected Launch</p>
+                          </div>
+
+                        </div>
+                  </span>
+                </div>
+
+                </div>
+                  <!-- //card3 -->
+               </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
 
     </div>
-  </header>
+  </div>
+<!--//featured_section-->
+<!--/select-cars-agile-->
+<div class="select-cars-agile">
+   <div class="container">
+         <div class="grid cars-main">
+      <div class="col-md-7 slide-show-w3l">
+         <!--//screen-gallery-->
+       <h3 class="tittle top">NEW CARS</h3>
+       <h6 class="sub">Great Prices. Great Vehicles. Great Service.</h6>
+            <div class="car-view-slider">
+                  <ul id="flexiselDemo">
+             <li>
+               <a href="upcoming.html"><img src="../../../assets/images/n2.jpg" alt=""/>
+                <div class="caption">
+                  <h3><a href="upcoming.html">Ford Mustang GT 500</a></h3>
+                  <span>Catchy Carz</span>
 
+                </div>
+               </a>
+
+             </li>
+             <li>
+               <a href="upcoming.html"><img src="../../../assets/images/n1.jpeg" alt=""/>
+               <div class="caption">
+                  <h3><a href="upcoming.html">Acura TLX</a></h3>
+                  <span>Catchy Carz</span>
+
+                </div>
+               </a>
+             </li>
+             <li>
+               <a href="upcoming.html"><img src="../../../assets/images/n3.jpg" alt=""/>
+                <div class="caption">
+                  <h3><a href="upcoming.html"> McLaren MP4-12c</a></h3>
+                  <span>Catchy Carz</span>
+
+                </div>
+               </a>
+             </li>
+             <li>
+               <a href="upcoming.html"><img src="../../../assets/images/n4.jpg" alt=""/>
+                <div class="caption">
+                  <h3><a href="upcoming.html">BMW Z4</a></h3>
+                <span>Catchy Carz</span>
+
+                </div>
+               </a>
+             </li>
+            </ul>
+          </div>
+          <!--//screen-gallery-->
+
+        </div>
+        <div class="col-md-5 new-car-used">
+          <h3 class="tittle top">USED CARS</h3>
+          <h6 class="sub">Used Cars at Shocking Prices.</h6>
+          <div class="used-one">
+             <figure class="effect-zoe">
+             <a href="used.html"><img src="../../../assets/images/used_car.jpg" alt="Used Car"></a>
+            <figcaption>
+              <h4>CATCHY <span>CARZ</span></h4>
+              <p class="icon-links">
+                <a href="#"><i class="glyphicon glyphicon-heart-empty"></i></a>
+                <a href="#"><i class="glyphicon glyphicon-eye-open"></i></a>
+                <a href="#"><i class="glyphicon glyphicon-paperclip"></i></a>
+              </p>
+            <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </figcaption>
+          </figure>
+          </div>
+          <div class="clearfix"> </div>
+           <div class="used-one second">
+             <figure class="effect-zoe">
+            <a href="used.html"><img src="../../../assets/images/used_car1.jpg" alt="Used Car"></a>
+            <figcaption>
+              <h4>CATCHY <span>CARZ</span></h4>
+              <p class="icon-links">
+                <a href="#"><i class="glyphicon glyphicon-heart-empty"></i></a>
+                <a href="#"><i class="glyphicon glyphicon-eye-open"></i></a>
+                <a href="#"><i class="glyphicon glyphicon-paperclip"></i></a>
+              </p>
+            <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </figcaption>
+          </figure>
+          </div>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+   </div>
 </div>
+<!-- /bottom-banner -->
+<div class="banner-bottom">
+   <div class="container">
+        <div class="bottom-form">
+    <div class="inner-text">
 
+     <form action="#" method="post">
+      <h3>Choose Your Best Car</h3>
+        <div class="best-hot">
+          <h5>Name</h5>
+          <input type="text" class="name active" placeholder="Name" required="">
+        </div>
+        <div class="best-hot">
+          <h5>Email</h5>
+          <input type="text" class="email" placeholder="Email" required="">
+        </div>
+        <div class="section_drop2">
+        <h5>City</h5>
+          <select id="country6" onchange="change_country(this.value)" class="frm-field required">
+                          <option value="null"> Select City</option>
+                          <option value="city">Amsterdam</option>
+                          <option value="city">Bahrain</option>
+                          <option value="city">Cannes</option>
+                          <option value="city">Dublin</option>
+                          <option value="city">Edinburgh</option>
+                          <option value="city">Florence</option>
+                          <option value="city">Georgia</option>
+                          <option value="city">Hungary</option>
+                          <option value="city">Hong Kong</option>
+                          <option value="city">Johannesburg</option>
+                          <option value="city">Kiev</option>
+                          <option value="city">London</option>
+                          <option value="city">Others...</option>
+                        </select>
+                         </div>
+        <input type="submit" value="Book Now">
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+<!-- //bottom-banner -->
+<!-- /slider1 -->
+    <div class="slider1">
+  <div class="arrival-grids">
+     <ul id="flexiselDemo1">
+       <li>
+         <a href="single.html"><img src="../../../assets/images/f1.jpg" alt=""/>
+          <div class="caption">
+            <h3><a href="single.html">Mercedes-Benz C250 CDI</a></h3>
+            <span>Catchy Carz</span>
 
+          </div>
+         </a>
 
+       </li>
+       <li>
+         <a href="single.html"><img src="../../../assets/images/f2.jpg" alt=""/>
+         <div class="caption">
+            <h3><a href="single.html">Audi A4 2.0 TDI</a></h3>
+            <span>Catchy Carz</span>
+
+          </div>
+         </a>
+       </li>
+       <li>
+         <a href="single.html"><img src="../../../assets/images/f3.jpg" alt=""/>
+          <div class="caption">
+            <h3><a href="single.html">Ford Mustang GT 500</a></h3>
+            <span>Catchy Carz</span>
+
+          </div>
+         </a>
+       </li>
+       <li>
+         <a href="single.html"><img src="../../../assets/images/f4.jpg" alt=""/>
+            <div class="caption">
+            <h3><a href="single.html">Ford Mustang GT 350</a></h3>
+          <span>Catchy Carz</span>
+
+          </div>
+         </a>
+       </li>
+       <li>
+         <a href="single.html"><img src="../../../assets/images/f7.jpg" alt=""/>
+            <div class="caption">
+            <h3><a href="single.html">BMW M4</a></h3>
+            <span>Catchy Carz</span>
+
+          </div>
+         </a>
+       </li>
+       <li>
+         <a href="single.html"><img src="../../../assets/images/f5.jpeg" alt=""/>
+         <div class="caption">
+            <h3><a href="single.html">Ferrari F430</a></h3>
+            <span>Catchy Carz</span>
+
+          </div>
+         </a>
+       </li>
+        <li>
+         <a href="single.html"><img src="../../../assets/images/f8.jpg" alt=""/>
+            <div class="caption">
+            <h3><a href="single.html">BMW X4 M Sport</a></h3>
+            <span>Catchy Carz</span>
+            </div>
+         </a>
+       </li>
+      </ul>
+    </div>
+  </div>
+<!-- //slider -->
+<!-- Services -->
+  <div class="clearfix"></div>
+  <!-- //Services -->
+    <!-- footer -->
+<div class="footer">
+  <div class="container">
+    <div class="footer-grids">
+      <div class="col-md-3 footer-grid animated wow slideInLeft" data-wow-delay=".5s">
+        <h3>About Us</h3>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse.<span>Excepteur sint occaecat cupidatat
+          non proident, sunt in culpa qui officia deserunt mollit.</span></p>
+      </div>
+      <div class="col-md-3 footer-grid animated wow slideInLeft" data-wow-delay=".6s">
+        <h3>Contact Info</h3>
+        <ul>
+          <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>1234k Avenue, 4th block, <span>New York City.</span></li>
+          <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">info@example.com</a></li>
+          <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+1234 567 567</li>
+        </ul>
+      </div>
+      <div class="col-md-3 footer-grid animated wow slideInLeft" data-wow-delay=".7s">
+        <h3>Flickr Posts</h3>
+        <div class="footer-grid-left">
+          <a href="single.html"><img src="../../../assets/images/13.jpg" alt=" " class="img-responsive" /></a>
+        </div>
+        <div class="footer-grid-left">
+          <a href="single.html"><img src="../../../assets/images/14.jpg" alt=" " class="img-responsive" /></a>
+        </div>
+        <div class="footer-grid-left">
+          <a href="single.html"><img src="../../../assets/images/15.jpg" alt=" " class="img-responsive" /></a>
+        </div>
+        <div class="footer-grid-left">
+          <a href="single.html"><img src="../../../assets/images/16.jpg" alt=" " class="img-responsive" /></a>
+        </div>
+        <div class="footer-grid-left">
+          <a href="single.html"><img src="../../../assets/images/13.jpg" alt=" " class="img-responsive" /></a>
+        </div>
+        <div class="footer-grid-left">
+          <a href="single.html"><img src="../../../assets/images/14.jpg" alt=" " class="img-responsive" /></a>
+        </div>
+        <div class="footer-grid-left">
+          <a href="single.html"><img src="../../../assets/images/15.jpg" alt=" " class="img-responsive" /></a>
+        </div>
+        <div class="footer-grid-left">
+          <a href="single.html"><img src="../../../assets/images/16.jpg" alt=" " class="img-responsive" /></a>
+        </div>
+        <div class="footer-grid-left">
+          <a href="single.html"><img src="../../../assets/images/13.jpg" alt=" " class="img-responsive" /></a>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+      <div class="col-md-3 footer-grid animated wow slideInLeft" data-wow-delay=".8s">
+        <h3>Blog Posts</h3>
+        <div class="footer-grid-sub-grids">
+          <div class="footer-grid-sub-grid-left">
+            <a href="single.html"><img src="../../../assets/images/11.jpg" alt=" " class="img-responsive" /></a>
+          </div>
+          <div class="footer-grid-sub-grid-right">
+            <h4><a href="single.html">culpa qui officia deserunt</a></h4>
+            <p>Posted On 25/3/2016</p>
+          </div>
+          <div class="clearfix"> </div>
+        </div>
+        <div class="footer-grid-sub-grids">
+          <div class="footer-grid-sub-grid-left">
+            <a href="single.html"><img src="../../../assets/images/10.jpg" alt=" " class="img-responsive" /></a>
+          </div>
+          <div class="footer-grid-sub-grid-right">
+            <h4><a href="single.html">Quis autem vel eum iure</a></h4>
+            <p>Posted On 25/4/2016</p>
+          </div>
+          <div class="clearfix"> </div>
+        </div>
+        <div class="footer-grid-sub-grids">
+          <div class="footer-grid-sub-grid-left">
+            <a href="single.html"><img src="../../../assets/images/15.jpg" alt=" " class="img-responsive" /></a>
+          </div>
+          <div class="footer-grid-sub-grid-right">
+            <h4><a href="single.html">Quis autem vel eum iure</a></h4>
+            <p>Posted On 25/5/2016</p>
+          </div>
+          <div class="clearfix"> </div>
+        </div>
+      </div>
+      <div class="clearfix"> </div>
+    </div>
+    <div class="footer-logo animated wow slideInUp" data-wow-delay=".5s">
+      <h2><a href="index.html">Catchy Directory<span>Your Own Directory</span></a></h2>
+    </div>
+    <div class="copy-right animated wow slideInUp" data-wow-delay=".5s">
+      <p>&copy 2016 Catchy Carz. All rights reserved | Design by Webkurve</p>
+    </div>
+  </div>
+</div>
 
 

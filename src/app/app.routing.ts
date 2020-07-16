@@ -10,6 +10,7 @@ const appRoutes: Routes = [
   { path: 'profile', component: ProfileComponent  },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+  // { path: 'home', component: RegisterComponent },
   // otherwise redirect to profile
   { path: '**', redirectTo: '/login' }
 ];
