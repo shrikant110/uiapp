@@ -18,7 +18,7 @@ export class AccountService {
    // return this.http.post(environment.API_URL+'/account/register',user)      .map(resp=>resp.json());
 
       const result = this.http
-      .post(environment.API_URL+'/account/register', this.httpOptions)
+      .post(environment.API_URL+'/account/register', user)
       .map((response: Response) => response );
     return result;
   }
