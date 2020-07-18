@@ -71,7 +71,7 @@ body, html {
   padding: 0;
 }
 
-#uploadNew .modal-body {float: left;}
+#uploadNew .modal-body {float: left;width: 100%;}
 .dis-contact select{width:100%;padding:5px 7px;}
 #uploadNew table{height: 250px;}
 #uploadNew table tbody{position: absolute; height: 230px; overflow-y: scroll; width:98%;}
@@ -88,3 +88,7 @@ body, html {
 .uploadSec .btnSec input{margin: 0 auto; display: block;}
 .discount h3{padding: 0;margin: 0;}
 .dis-contact h4 {font-size: 16px; font-weight: bold; margin: 0;}
+.loaderSec{position: relative;}
+.loaderSec span{position: absolute;top:200px;font-size:14px;text-align: center;padding-left: 194px;color:#666;}
+.loaderSec img{width: 50%;opacity: 0.3;margin: 50px auto 0;display: block;}
+.blankTable img{width: 20%;opacity: 0.3;margin: 120px auto 0;display: block;}

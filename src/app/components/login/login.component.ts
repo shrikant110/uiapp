@@ -24,15 +24,16 @@ export class LoginComponent implements OnInit {
       Password: this.user.PassCode,
       'remember-me': true,
      };
-     this.router.navigateByUrl('/profile');
-    // this.authService.logIn(loginModel)
-    //   .subscribe(data=>{
-    //       console.info("I am here ====>"+JSON.stringify(data));
-    //       localStorage.setItem("currentUser",JSON.stringify(data));
-    //       this.router.navigate(['/profile']);
-    //     },err=>{
-    //       this.errorMessage="error :  Username or password is incorrect";
-    //     }
-    //   )
+
+    this.authService.logIn(loginModel)
+      .subscribe(data=>{
+          console.info("I am here ====>"+JSON.stringify(data));
+          localStorage.setItem("currentUser",JSON.stringify(data));
+          // this.router.navigate(['/profile']);
+          this.router.navigateByUrl('/profile');
+        },err=>{
+          this.errorMessage="error :  Username or password is incorrect";
+        }
+      )
   }
 }

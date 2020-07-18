@@ -7,12 +7,13 @@ import {Observable} from 'rxjs';
 
 @Injectable()
 export class UploadService {
-  constructor(public http: Http) { }
+  private httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type':  'application/x-www-form-urlencoded',
+    })
+  };
+  constructor(private http: HttpClient) { }
 
-  createAccount(user:User){
-    return this.http.post(environment.API_URL+'/account/register',user)
-      .map(resp=>resp.json());
-  }
 
   public upload(fileName,fileObject) {
     const formData: FormData = new FormData();
@@ -23,8 +24,12 @@ export class UploadService {
     formData.append('image', fileObject);
     // formData.append('fileName',fileName);
 
-    let result = this.http.post(environment.API_URL + 'vc/file/upload',formData).map((response => response));
+    let result = this.http.post(environment.API_URL + 'vc/file/upload',formData).map((response: Response) => response );
     return result;
   }
 
+  public mapping(saveObject) {
+      let result = this.http.post(environment.API_URL + 'vc/set/mapping',saveObject).map((response: Response) => response );
+    return result;
+  }
 }
