@@ -6,7 +6,7 @@ import { DashboardService } from '../../services/dashboard.service';
 import jsPDF from 'jspdf';
 import { HttpClient } from '@angular/common/http';
 import {environment} from "../../../environments/environment";
-
+import { UploadService } from "../../services/upload.service";
 
 @Component({
   selector: 'app-profile',
@@ -17,13 +17,8 @@ import {environment} from "../../../environments/environment";
 export class ProfileComponent implements OnInit {
   uploadNew:boolean=false;
   currentUser: User;
-  nameVal:any="";
-  addressVal:any="";
-  cityVal:any="";
-  countryVal:any="";
-  emailVal:any="";
-  contactVal:any="";
-  constructor(public authService: AuthService, public router: Router,public dashboard:DashboardService,public http: HttpClient) {
+
+  constructor(public authService: AuthService, public router: Router,public dashboard:DashboardService,public http: HttpClient,public uploadserv:UploadService) {
     this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
      this.dashboard.getModules() ;
 
@@ -68,9 +63,36 @@ export class ProfileComponent implements OnInit {
   uploadNewHide(){
     this.uploadNew=false;
   }
+  fileString:any='';
+  fileObject:any=null;
+  errorFlag:boolean = false;
+  errorMsg:any="Please check the file uploaded !";
+  fileUpload(event){
+    this.fileString='';
+    var files = event.target.files;
+    if(files[0].size ==  0){
+      this.fileObject = null;
+      this.fileString ="";
+      this.errorFlag=true;
+    }else{
+       this.fileObject = files[0];
+       this.fileString = files[0].name;
+    }
+    console.log("uploaded file name -->"+this.fileString+" fileObject -->"+this.fileObject);
+  }
 
-  changeVal(val){
-    console.log("val-"+val);
+  scannedData:any;
+  uploadFile(){
+    console.log(this.fileObject+" ==> "+this.fileString+" ==>");
+    if(this.fileObject!=null && this.fileString!=''){
+      this.uploadserv.upload(this.fileString,this.fileObject).subscribe((obj:any)=>{
+        if(obj.ResponseCode==200){
+          this.scannedData=obj.Data;
+        }
+      });
+    }
+
+    console.log(this.scannedData);
   }
 
 }

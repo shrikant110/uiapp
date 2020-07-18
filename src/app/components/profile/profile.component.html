@@ -1,5 +1,5 @@
 <!--/banner-section-->
-<div id="demo-1" data-zs-src='["../../../assets/images//2.jpg"]' data-zs-overlay="dots">
+<div id="demo-1" data-zs-src='["../../../assets/images/mainbg.jpg"]' data-zs-overlay="dots">
   <div class="demo-inner-content">
      <div class="header-top">
       <!-- /header-left -->
@@ -79,6 +79,7 @@
            <form action="#" method="post">
         <div class="search-two">
         <select id="country" onchange="change_country(this.value)" class="frm-field required">
+            <option value="abt">Any</option>
             <option value="abt">Name</option>
             <option value="acura">Contact</option>
             <option value="alfa romeo">City</option>
@@ -586,111 +587,223 @@
           </div>
       </div>
        <div class="modal-body about">
-         <div class="uploadSec">
+         <div class="uploadSec col-md-5 col-sm-5 pull-left">
           <form action="#" method="post">
-            <div class="col-md-6 col-sm-6 pull-left">
-              <input type="file" name="fileupload" class="fileupload" placeholder="File Upload" required="">
+            <div class="col-md-12 col-sm-12 pull-left imageSec p0">
+              <input type="file" name="fileupload" class="fileupload" placeholder="File Upload" (change)="fileUpload($event)">
             </div>
-            <div class="col-md-6 col-sm-6 pull-left">
-              <input type="submit" value="Scan Image" class="pull-right btn btn-primary btn-sm">
+            <div class="col-md-12 col-sm-12 pull-left btnSec p0">
+              <input type="submit" value="Scan Image" class="btn btn-primary btn-sm" (click)="uploadFile()">
             </div>
 
 
           </form>
         </div>
 
-          <div class="dis-contact">
+          <div class="dis-contact col-md-7 col-sm-7 pull-left">
             <h4>Scan Result</h4>
                 <form action="#" method="post">
                   <div class="d-c">
                     <table class="table table-sm">
                       <thead>
                         <tr>
-                          <th>&nbsp;</th>
-                          <th>Name</th>
-                          <th>Address</th>
-                          <th>City</th>
-                          <th>Country</th>
-                          <th>Contact</th>
-                          <th>E-mail</th>
+                          <th class="col-md-2 col-sm-2">S.No</th>
+                          <th class="col-md-7 col-sm-7">Feched Value</th>
+                          <th class="col-md-3 col-sm-3">Select Type</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <td>Feched Result</td>
-                          <td>
-                            <select class="name active" [(ngModel)]="nameVal" name="name" (change)="changeVal(nameVal)">
-                              <option value="">select</option>
-                              <option>name1</option>
-                              <option>name1</option>
-                              <option>name1</option>
-                              <option>name1</option>
-                            </select>
-                          </td>
-                          <td>
-                            <select class="name active" name="address" [(ngModel)]="addressVal">
-                              <option value="">select</option>
-                              <option>Address</option>
-                              <option>Address</option>
-                              <option>Address</option>
-                              <option>Address</option>
-                            </select>
-                          </td>
-                          <td>
-                            <select class="name active" name="city" [(ngModel)]="cityVal">
-                              <option value="">select</option>
-                              <option>city</option>
-                              <option>city</option>
-                              <option>city</option>
-                              <option>city</option>
-                            </select>
-                          </td>
-                          <td>
-                            <select class="name active" name="country" [(ngModel)]="countryVal">
-                              <option value="">select</option>
-                              <option>Country</option>
-                              <option>Country</option>
-                              <option>Country</option>
-                              <option>Country</option>
-                            </select>
-                          </td>
-                          <td>
-                            <select class="name active" name="contact" [(ngModel)]="contactVal">
-                            <option value="">select</option>
-                            <option>contact</option>
-                            <option>contact</option>
-                            <option>contact</option>
-                            <option>contact</option>
-                          </select>
-                        </td>
-                          <td>
-                            <select class="name active" name="email" [(ngModel)]="emailVal">
-                              <option value="">select</option>
-                              <option>email</option>
-                              <option>email</option>
-                              <option>email</option>
-                              <option>email</option>
+                          <td class="col-md-2 col-sm-2">1.</td>
+                          <td class="col-md-7 col-sm-7">
+                            <input type="text" value=""></td>
+                          <td class="col-md-3 col-sm-3">
+                            <select class="name active">
+                              <option value="">Select</option>
+                              <option value="NAME">Name</option>
+                              <option value="DESIGNATION">Designation</option>
+                              <option value="MOBILE_NO">Contact</option>
+                              <option value="EMAIL_ID">Email</option>
+                              <option value="COUNTRY">Country</option>
+                              <option value="ADDRESS">Address</option>
+                              <option value="WEBSITE">Website</option>
                             </select>
                           </td>
                         </tr>
                         <tr>
-                          <td>Selected</td>
-                          <td>{{nameVal}}</td>
-                          <td>{{addressVal}}</td>
-                          <td>{{cityVal}}</td>
-                          <td>{{countryVal}}</td>
-                          <td>{{contactVal}}</td>
-                          <td>{{emailVal}}</td>
-
+                          <td>2.</td>
+                          <td><input type="text" value=""></td>
+                          <td>
+                            <select class="name active">
+                              <option value="">select</option>
+                              <option>Name</option>
+                              <option>Designation</option>
+                              <option>Email</option>
+                              <option>Contact</option>
+                              <option>Address</option>
+                              <option>City</option>
+                              <option>Country</option>
+                              <option>Website</option>
+                            </select>
+                          </td>
                         </tr>
+                        <tr>
+                          <td>3.</td>
+                          <td><input type="text" value=""></td>
+                          <td>
+                            <select class="name active">
+                              <option value="">select</option>
+                              <option>Name</option>
+                              <option>Designation</option>
+                              <option>Email</option>
+                              <option>Contact</option>
+                              <option>Address</option>
+                              <option>City</option>
+                              <option>Country</option>
+                              <option>Website</option>
+                            </select>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>4.</td>
+                          <td><input type="text" value=""></td>
+                          <td>
+                            <select class="name active">
+                              <option value="">select</option>
+                              <option>Name</option>
+                              <option>Designation</option>
+                              <option>Email</option>
+                              <option>Contact</option>
+                              <option>Address</option>
+                              <option>City</option>
+                              <option>Country</option>
+                              <option>Website</option>
+                            </select>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>5.</td>
+                          <td><input type="text" value=""></td>
+                          <td>
+                            <select class="name active">
+                              <option value="">select</option>
+                              <option>Name</option>
+                              <option>Designation</option>
+                              <option>Email</option>
+                              <option>Contact</option>
+                              <option>Address</option>
+                              <option>City</option>
+                              <option>Country</option>
+                              <option>Website</option>
+                            </select>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>6.</td>
+                          <td><input type="text" value=""></td>
+                          <td>
+                            <select class="name active">
+                              <option value="">select</option>
+                              <option>Name</option>
+                              <option>Designation</option>
+                              <option>Email</option>
+                              <option>Contact</option>
+                              <option>Address</option>
+                              <option>City</option>
+                              <option>Country</option>
+                              <option>Website</option>
+                            </select>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>7.</td>
+                          <td><input type="text" value=""></td>
+                          <td>
+                            <select class="name active">
+                              <option value="">select</option>
+                              <option>Name</option>
+                              <option>Designation</option>
+                              <option>Email</option>
+                              <option>Contact</option>
+                              <option>Address</option>
+                              <option>City</option>
+                              <option>Country</option>
+                              <option>Website</option>
+                            </select>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>8.</td>
+                          <td><input type="text" value=""></td>
+                          <td>
+                            <select class="name active">
+                              <option value="">select</option>
+                              <option>Name</option>
+                              <option>Designation</option>
+                              <option>Email</option>
+                              <option>Contact</option>
+                              <option>Address</option>
+                              <option>City</option>
+                              <option>Country</option>
+                              <option>Website</option>
+                            </select>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>9.</td>
+                          <td><input type="text" value=""></td>
+                          <td>
+                            <select class="name active">
+                              <option value="">select</option>
+                              <option>Name</option>
+                              <option>Designation</option>
+                              <option>Email</option>
+                              <option>Contact</option>
+                              <option>Address</option>
+                              <option>City</option>
+                              <option>Country</option>
+                              <option>Website</option>
+                            </select>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>10.</td>
+                          <td><input type="text" value=""></td>
+                          <td>
+                            <select class="name active">
+                              <option value="">select</option>
+                              <option>Name</option>
+                              <option>Designation</option>
+                              <option>Email</option>
+                              <option>Contact</option>
+                              <option>Address</option>
+                              <option>City</option>
+                              <option>Country</option>
+                              <option>Website</option>
+                            </select>
+                          </td>
+                        </tr>
+
                       </tbody>
                     </table>
 
 
                   </div>
-                  <input type="submit" value="Save">
+
+
+
+
                 </form>
           </div>
+       </div>
+
+       <div class="modal-footer">
+        <div class="col-md-12 col-sm-12">
+          <div class="col-md-9 col-sm-9"></div>
+          <div class="col-md-3 col-sm-3 p0" >
+            <input type="submit" class="pull-right btn btn-primary" value="Save">
+          </div>
+        </div>
        </div>
     </div>
   </div>

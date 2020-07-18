@@ -8,6 +8,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from "./services/auth.service";
 import { DashboardService } from "./services/dashboard.service";
+import { UploadService } from "./services/upload.service";
 import { HttpModule} from "@angular/http";
 import { HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AccountService} from "./services/account.service";
@@ -33,7 +34,7 @@ import { HttpRequestInterceptor} from './HttpRequestInterceptor';
   imports: [
     BrowserModule,HttpModule,HttpClientModule,FormsModule,routing, AmChartsModule,FacebookModule.forRoot(),
   ],
-  providers: [AuthService,AccountService,DashboardService,UrlPermission 
+  providers: [AuthService,AccountService,DashboardService,UrlPermission ,UploadService
   ,{ provide: HTTP_INTERCEPTORS, useClass: HttpRequestInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
