@@ -105,5 +105,5 @@ button:hover, a:hover {opacity: 0.7;}
 .addSec{margin-top:10px;}
 .addLeft{text-align:right;font-weight: 600;color: #555;font-size: 13px;}
 .addRight{text-align:left;font-weight:500;font-size: 13px;}
-.addSec{height: 54px;}
+.addSecHeight{height: 54px;}
 #uploadimg{width: 100%;padding: 20px 5%;}

@@ -128,7 +128,7 @@ export class ProfileComponent implements OnInit {
         if(obj.ResponseCode=="200"){
           this.scannedData=obj.Data.scanMaster;
           // this.scannedImage=obj.Data.scanMaster.scanImage.pic;
-          this.scannedImage = window.URL.createObjectURL(obj.Data.scanMaster.scanImage.pic);
+          // this.scannedImage = window.URL.createObjectURL(obj.Data.scanMaster.scanImage.pic);
           this.showTable=true;
           this.blankTable=false;
           this.loaderSec=false;
