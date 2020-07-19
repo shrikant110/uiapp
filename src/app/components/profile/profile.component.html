@@ -17,54 +17,6 @@
           </div>
           <!-- search-scripts -->
 
-          <!-- //search-scripts -->
-            <ul>
-
-            <li style="display:none">
-            <a href="#" data-toggle="modal" data-target="#myModal4"><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>Select Your Location</a></li>
-
-            <li style="display:none"><button id="showRight" class="navig">Login </button>
-             <div class="cbp-spmenu-push">
-            <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
-              <h3>Login</h3>
-            <div class="login-inner">
-              <div class="login-top">
-               <form action="#" method="post">
-                <input type="text" name="email" class="email" placeholder="Email" required=""/>
-                <input type="password" name="password" class="password" placeholder="Password" required=""/>
-                <input type="checkbox" id="brand" value="">
-                <label for="brand"><span></span> Remember me</label>
-              </form>
-              <div class="login-bottom">
-                <ul>
-                  <li>
-                    <a href="#">Forgot password?</a>
-                  </li>
-                  <li>
-                    <form action="#" method="post">
-                      <input type="submit" value="LOGIN"/>
-                    </form>
-                  </li>
-                </ul>
-                <div class="clearfix"></div>
-              </div>
-              <div class="clearfix"></div>
-
-            </div>
-            <div class="social-icons">
-            <ul>
-              <li><a href="#"><span class="icons"></span><span class="text">Facebook</span></a></li>
-              <li class="twt"><a href="#"><span class="icons"></span><span class="text">Twitter</span></a></li>
-              <li class="ggp"><a href="#"><span class="icons"></span><span class="text">Google+</span></a></li>
-            </ul>
-          </div>
-            </div>
-            </nav>
-          </div>
-
-          <!--Navigation from Right To Left-->
-              </li>
-          </ul>
 
         </div>
 
@@ -78,7 +30,7 @@
       <!-- <p>Eye it – try it – buy it!</p> -->
            <form action="#" method="post">
         <div class="search-two">
-        <select id="country" onchange="change_country(this.value)" class="frm-field required">
+        <select id="country" class="frm-field required">
             <option value="abt">Any</option>
             <option value="abt">Name</option>
             <option value="acura">Contact</option>
@@ -88,10 +40,10 @@
         </select>
       </div>
       <div class="section_room">
-        <input type="text" id="searchMega" class="frm-field required" placeholder="Search here">
+        <input type="text" id="searchMega" class="frm-field required" placeholder="Search here" #search (keyup)="getSearchValue(search.value,$event)">
       </div>
 
-        <input type="submit" value="Search">
+        <input type="submit" value="Search" (click)="searchData()">
         <div class="clearfix"></div>
       </form>
     </div>
@@ -99,171 +51,64 @@
   </div>
 </div>
 
-      <!-- //sign-up-->
-      <div class="modal ab fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog sign" role="document">
-        <div class="modal-content about">
-          <div class="modal-header one">
-            <button type="button" class="close sg" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <div class="discount one">
-                <h3>Sign Up</h3>
 
-              </div>
-          </div>
-           <div class="modal-body about">
-              <div class="login-top sign-top one">
-               <form action="#" method="post">
-                <input type="text" name="name" class="name active" placeholder="Your Name" required="">
-                <input type="text" name="email "class="email" placeholder="Email" required="">
-                <input type="password" name="password" class="password" placeholder="Password" required="">
-                <input type="checkbox" id="brand1" value="">
-                <label for="brand1"><span></span> Remember me?</label>
-                <div class="login-bottom one">
-                <ul>
-                  <li>
-                    <a href="#">Forgot password?</a>
-                  </li>
-                  <li>
-
-                    <input type="submit" value="SIGN UP">
-
-                  </li>
-                <div class="clearfix"></div>
-              </ul>
-              </div>
-              </form>
-
-            </div>
-
-
-           </div>
-           <div class="social-icons">
-                <ul>
-                  <li><a href="#"><span class="icons"></span><span class="text">Facebook</span></a></li>
-                  <li class="twt"><a href="#"><span class="icons"></span><span class="text">Twitter</span></a></li>
-                  <li class="ggp"><a href="#"><span class="icons"></span><span class="text">Google+</span></a></li>
-                </ul>
-                </div>
-
-        </div>
-      </div>
-    </div>
-    <!-- //sign-up-->
-      <!-- /location-->
-      <div class="modal ab fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog sign" role="document">
-        <div class="modal-content about">
-          <div class="modal-header one">
-            <button type="button" class="close sg" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <div class="discount one">
-                <h3>Please Tell Us Your City</h3>
-
-              </div>
-          </div>
-           <div class="modal-body about">
-              <div class="login-top sign-top location">
-               <form action="#" method="post">
-                            <select id="country12" onchange="change_country(this.value)" class="frm-field required">
-                          <option value="null"> Select City</option>
-                          <option value="city">Amsterdam</option>
-                          <option value="city">Bahrain</option>
-                          <option value="city">Cannes</option>
-                          <option value="city">Dublin</option>
-                          <option value="city">Edinburgh</option>
-                          <option value="city">Florence</option>
-                          <option value="city">Georgia</option>
-                          <option value="city">Hungary</option>
-                          <option value="city">Hong Kong</option>
-                          <option value="city">Johannesburg</option>
-                          <option value="city">Kiev</option>
-                          <option value="city">London</option>
-                          <option value="city">Others...</option>
-                  </select>
-              </form>
-                 </div>
-
-
-           </div>
-
-
-        </div>
-      </div>
-    </div>
-    <!-- //location-->
-<!--//banner-section-->
 <!--/featured_section-->
-<div class="featured_section_w3l">
+<div class="featured_section_w3l" *ngIf="searchSec">
   <div class="container">
         <h3 class="tittle">Search Results</h3>
                <div class="inner_tabs">
   <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
-          <!-- <ul id="myTab" class="nav nav-tabs" role="tablist">
-            <li role="presentation" class="active"><a href="#expeditions" id="expeditions-tab" role="tab" data-toggle="tab" aria-controls="expeditions" aria-expanded="true">UpComing cars</a></li>
-            <li role="presentation"><a href="#tours" role="tab" id="tours-tab" data-toggle="tab" aria-controls="tours">Popular</a></li>
-            <li role="presentation"><a href="#tree" role="tab" id="tree-tab" data-toggle="tab" aria-controls="tree">Just Launched</a></li>
-
-          </ul> -->
           <div id="myTabContent" class="tab-content">
             <div role="tabpanel" class="tab-pane fade in active" id="expeditions" aria-labelledby="expeditions-tab">
                <div class="section__content clearfix">
-               <!-- /card1 -->
-                <div class="card">
-                <div class="card__front">
-                  <span class="card__text">
-                       <div class="img-grid">
-                        <img src="../../../assets/images/f1.jpg" alt="Catchy Carz">
-                        <div class="car_description">
-                           <h4><a href="single.html">Name</a></h4>
-                           <div class="price"><span class="fa fa-rupee"></span><span class="font25">$ 8000 - $ 12000</span></div>
-                           <p>Estimated Price</p>
-                           <div class="date">Mar 2017</div>
-                           <p>Expected Launch</p>
-                          </div>
-
-                        </div>
-                  </span>
-                </div>
-                </div>
-                  <!-- //card1 -->
-                <!-- /card2 -->
-                <div class="card">
-                <div class="card__front">
-                  <span class="card__text">
-                       <div class="img-grid">
-                        <img src="../../../assets/images/f2.jpg" alt="Catchy">
-                        <div class="car_description">
-                           <h4><a href="single.html">Audi A4 2.0 TDI</a></h4>
-                           <div class="price"><span class="fa fa-rupee"></span><span class="font25">$ 6000 - $ 10000</span></div>
-                           <p>Estimated Price</p>
-                           <div class="date">Mar 2017</div>
-                           <p>Expected Launch</p>
-                          </div>
-
-                        </div>
-                  </span>
-                </div>
-                </div>
-                  <!-- //card2 -->
-                <!-- /card3 -->
-                <div class="card">
-                <div class="card__front">
-                  <span class="card__text">
-                       <div class="img-grid">
-                        <img src="../../../assets/images/f3.jpg" alt="Catchy Carz">
-                        <div class="car_description">
-                           <h4><a href="single.html">Foed Mustang GT 500</a></h4>
-                           <div class="price"><span class="fa fa-rupee"></span><span class="font25">$ 9000 - $ 12000</span></div>
-                           <p>Estimated Price</p>
-                           <div class="date">Mar 2017</div>
-                           <p>Expected Launch</p>
-                          </div>
-
-                        </div>
-                  </span>
+                <div class="card" *ngFor="let data of fetchedData">
+                  <!-- <img src="../../../assets/images/card-placeholder.jpg" alt="John" style="width:100%"> -->
+                  <h1>
+                    <div *ngIf="data.NAME=='' || data.NAME==null">N.A.</div>
+                    <div class="elips" *ngIf="data.NAME!='' && data.NAME!=null">{{data.NAME}}</div>
+                  </h1>
+                  <div class="title" title="{{data.DESIGNATION}}">
+                    <div *ngIf="data.DESIGNATION=='' || data.DESIGNATION==null">N.A.</div>
+                    <div class="elips" *ngIf="data.DESIGNATION!='' && data.DESIGNATION!=null">{{data.DESIGNATION}}</div>
+                  </div>
+                  <div class="col-md-12 col-sm-12 addSec">
+                    <div class="col-md-3 col-sm-3 pull-left p0 addLeft">Address</div>
+                    <div class="col-md-9 col-sm-9 pull-left pr0 addRight">{{data.ADDRESS}}</div>
+                  </div>
+                  <div class="col-md-12 col-sm-12 addSec">
+                    <div class="col-md-3 col-sm-3 pull-left p0 addLeft">City</div>
+                    <div class="col-md-9 col-sm-9 pull-left pr0 addRight">{{data.CITY}}</div>
+                  </div>
+                  <div class="col-md-12 col-sm-12 addSec">
+                    <div class="col-md-3 col-sm-3 pull-left p0 addLeft">State</div>
+                    <div class="col-md-9 col-sm-9 pull-left pr0 addRight">{{data.STATE}}</div>
+                  </div>
+                  <div class="col-md-12 col-sm-12 addSec">
+                    <div class="col-md-3 col-sm-3 pull-left p0 addLeft">Country</div>
+                    <div class="col-md-9 col-sm-9 pull-left pr0 addRight">{{data.COUNTRY}}</div>
+                  </div>
+                  <div class="col-md-12 col-sm-12 addSec">
+                    <div class="col-md-3 col-sm-3 pull-left p0 addLeft">Email</div>
+                    <div class="col-md-9 col-sm-9 pull-left pr0 addRight elips">{{data.EMAIL_ID}}</div>
+                  </div>
+                  <div class="col-md-12 col-sm-12 addSec">
+                    <div class="col-md-3 col-sm-3 pull-left p0 addLeft">Contact</div>
+                    <div class="col-md-9 col-sm-9 pull-left pr0 addRight">{{data.MOBILE_NO}}</div>
+                  </div>
+                  <div class="col-md-12 col-sm-12 addSec">
+                    <div class="col-md-3 col-sm-3 pull-left p0 addLeft">Website</div>
+                    <div class="col-md-9 col-sm-9 pull-left pr0 addRight">{{data.WEBSITE}}</div>
+                  </div>
+                  <!-- <div style="margin: 24px 0;">
+                    <a href="#"><i class="fa fa-dribbble"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                  </div> -->
+                  <p><button>Contact</button></p>
                 </div>
 
-                </div>
-                  <!-- //card3 -->
+
                </div>
             </div>
 
@@ -282,10 +127,9 @@
 <div class="footer">
   <div class="container">
     <div class="footer-grids">
-      <div class="col-md-3 footer-grid animated wow slideInLeft" data-wow-delay=".5s">
+      <div class="col-md-9 footer-grid animated wow slideInLeft" data-wow-delay=".5s">
         <h3>About Us</h3>
-        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse.<span>Excepteur sint occaecat cupidatat
-          non proident, sunt in culpa qui officia deserunt mollit.</span></p>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
       </div>
       <div class="col-md-3 footer-grid animated wow slideInLeft" data-wow-delay=".6s">
         <h3>Contact Info</h3>
@@ -295,74 +139,12 @@
           <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+1234 567 567</li>
         </ul>
       </div>
-      <div class="col-md-3 footer-grid animated wow slideInLeft" data-wow-delay=".7s">
-        <h3>Flickr Posts</h3>
-        <div class="footer-grid-left">
-          <a href="single.html"><img src="../../../assets/images/13.jpg" alt=" " class="img-responsive" /></a>
-        </div>
-        <div class="footer-grid-left">
-          <a href="single.html"><img src="../../../assets/images/14.jpg" alt=" " class="img-responsive" /></a>
-        </div>
-        <div class="footer-grid-left">
-          <a href="single.html"><img src="../../../assets/images/15.jpg" alt=" " class="img-responsive" /></a>
-        </div>
-        <div class="footer-grid-left">
-          <a href="single.html"><img src="../../../assets/images/16.jpg" alt=" " class="img-responsive" /></a>
-        </div>
-        <div class="footer-grid-left">
-          <a href="single.html"><img src="../../../assets/images/13.jpg" alt=" " class="img-responsive" /></a>
-        </div>
-        <div class="footer-grid-left">
-          <a href="single.html"><img src="../../../assets/images/14.jpg" alt=" " class="img-responsive" /></a>
-        </div>
-        <div class="footer-grid-left">
-          <a href="single.html"><img src="../../../assets/images/15.jpg" alt=" " class="img-responsive" /></a>
-        </div>
-        <div class="footer-grid-left">
-          <a href="single.html"><img src="../../../assets/images/16.jpg" alt=" " class="img-responsive" /></a>
-        </div>
-        <div class="footer-grid-left">
-          <a href="single.html"><img src="../../../assets/images/13.jpg" alt=" " class="img-responsive" /></a>
-        </div>
-        <div class="clearfix"> </div>
-      </div>
-      <div class="col-md-3 footer-grid animated wow slideInLeft" data-wow-delay=".8s">
-        <h3>Blog Posts</h3>
-        <div class="footer-grid-sub-grids">
-          <div class="footer-grid-sub-grid-left">
-            <a href="single.html"><img src="../../../assets/images/11.jpg" alt=" " class="img-responsive" /></a>
-          </div>
-          <div class="footer-grid-sub-grid-right">
-            <h4><a href="single.html">culpa qui officia deserunt</a></h4>
-            <p>Posted On 25/3/2016</p>
-          </div>
-          <div class="clearfix"> </div>
-        </div>
-        <div class="footer-grid-sub-grids">
-          <div class="footer-grid-sub-grid-left">
-            <a href="single.html"><img src="../../../assets/images/10.jpg" alt=" " class="img-responsive" /></a>
-          </div>
-          <div class="footer-grid-sub-grid-right">
-            <h4><a href="single.html">Quis autem vel eum iure</a></h4>
-            <p>Posted On 25/4/2016</p>
-          </div>
-          <div class="clearfix"> </div>
-        </div>
-        <div class="footer-grid-sub-grids">
-          <div class="footer-grid-sub-grid-left">
-            <a href="single.html"><img src="../../../assets/images/15.jpg" alt=" " class="img-responsive" /></a>
-          </div>
-          <div class="footer-grid-sub-grid-right">
-            <h4><a href="single.html">Quis autem vel eum iure</a></h4>
-            <p>Posted On 25/5/2016</p>
-          </div>
-          <div class="clearfix"> </div>
-        </div>
-      </div>
+
+
       <div class="clearfix"> </div>
     </div>
     <div class="footer-logo animated wow slideInUp" data-wow-delay=".5s">
-      <h2><a href="index.html">Directory<span>Your Own Directory</span></a></h2>
+      <h2><a href="index.html">Directory.com<span>Your Own Directory</span></a></h2>
     </div>
     <div class="copy-right animated wow slideInUp" data-wow-delay=".5s">
       <p>&copy; 2016 Directory. All rights reserved | Design by Webkurve</p>
@@ -389,7 +171,8 @@
          <div class="uploadSec col-md-5 col-sm-5 pull-left">
           <form action="#" method="post">
             <div class="col-md-12 col-sm-12 pull-left imageSec p0">
-              <input type="file" name="fileupload" class="fileupload" placeholder="File Upload" (change)="fileUpload($event)">
+              <input type="file" name="fileupload" class="fileupload" #file placeholder="File Upload" (change)="fileUpload($event);preview(file.files)">
+                <img id="uploadimg" [src]="imgURL" >
             </div>
             <div class="col-md-12 col-sm-12 pull-left btnSec p0">
               <input type="submit" value="Scan Image" class="btn btn-primary btn-sm" (click)="uploadFile()">
@@ -422,11 +205,11 @@
                               <option value="">Select</option>
                               <option value="NAME">Name</option>
                               <option value="DESIGNATION">Designation</option>
-                              <option value="MOBILE_NO">Contact</option>
-                              <option value="EMAIL_ID">Email</option>
-                              <option value="COUNTRY">Country</option>
+                              <!-- <option value="MOBILE_NO">Contact</option> -->
+                              <!-- <option value="EMAIL_ID">Email</option> -->
+                              <!-- <option value="COUNTRY">Country</option> -->
                               <option value="ADDRESS">Address</option>
-                              <option value="WEBSITE">Website</option>
+                              <!-- <option value="WEBSITE">Website</option> -->
                             </select>
                           </td>
                         </tr>
@@ -438,11 +221,11 @@
                               <option value="">Select</option>
                               <option value="NAME">Name</option>
                               <option value="DESIGNATION">Designation</option>
-                              <option value="MOBILE_NO">Contact</option>
-                              <option value="EMAIL_ID">Email</option>
-                              <option value="COUNTRY">Country</option>
+                              <!-- <option value="MOBILE_NO">Contact</option> -->
+                              <!-- <option value="EMAIL_ID">Email</option> -->
+                              <!-- <option value="COUNTRY">Country</option> -->
                               <option value="ADDRESS">Address</option>
-                              <option value="WEBSITE">Website</option>
+                              <!-- <option value="WEBSITE">Website</option> -->
                             </select>
                           </td>
                         </tr>
@@ -454,11 +237,11 @@
                               <option value="">Select</option>
                               <option value="NAME">Name</option>
                               <option value="DESIGNATION">Designation</option>
-                              <option value="MOBILE_NO">Contact</option>
-                              <option value="EMAIL_ID">Email</option>
-                              <option value="COUNTRY">Country</option>
+                              <!-- <option value="MOBILE_NO">Contact</option> -->
+                              <!-- <option value="EMAIL_ID">Email</option> -->
+                              <!-- <option value="COUNTRY">Country</option> -->
                               <option value="ADDRESS">Address</option>
-                              <option value="WEBSITE">Website</option>
+                              <!-- <option value="WEBSITE">Website</option> -->
                             </select>
                           </td>
                         </tr>
@@ -470,11 +253,11 @@
                               <option value="">Select</option>
                               <option value="NAME">Name</option>
                               <option value="DESIGNATION">Designation</option>
-                              <option value="MOBILE_NO">Contact</option>
-                              <option value="EMAIL_ID">Email</option>
-                              <option value="COUNTRY">Country</option>
+                              <!-- <option value="MOBILE_NO">Contact</option> -->
+                              <!-- <option value="EMAIL_ID">Email</option> -->
+                              <!-- <option value="COUNTRY">Country</option> -->
                               <option value="ADDRESS">Address</option>
-                              <option value="WEBSITE">Website</option>
+                              <!-- <option value="WEBSITE">Website</option> -->
                             </select>
                           </td>
                         </tr>
@@ -486,11 +269,11 @@
                               <option value="">Select</option>
                               <option value="NAME">Name</option>
                               <option value="DESIGNATION">Designation</option>
-                              <option value="MOBILE_NO">Contact</option>
-                              <option value="EMAIL_ID">Email</option>
-                              <option value="COUNTRY">Country</option>
+                              <!-- <option value="MOBILE_NO">Contact</option> -->
+                              <!-- <option value="EMAIL_ID">Email</option> -->
+                              <!-- <option value="COUNTRY">Country</option> -->
                               <option value="ADDRESS">Address</option>
-                              <option value="WEBSITE">Website</option>
+                              <!-- <option value="WEBSITE">Website</option> -->
                             </select>
                           </td>
                         </tr>
@@ -502,11 +285,11 @@
                               <option value="">Select</option>
                               <option value="NAME">Name</option>
                               <option value="DESIGNATION">Designation</option>
-                              <option value="MOBILE_NO">Contact</option>
-                              <option value="EMAIL_ID">Email</option>
-                              <option value="COUNTRY">Country</option>
+                              <!-- <option value="MOBILE_NO">Contact</option> -->
+                              <!-- <option value="EMAIL_ID">Email</option> -->
+                              <!-- <option value="COUNTRY">Country</option> -->
                               <option value="ADDRESS">Address</option>
-                              <option value="WEBSITE">Website</option>
+                              <!-- <option value="WEBSITE">Website</option> -->
                             </select>
                           </td>
                         </tr>
@@ -518,11 +301,11 @@
                               <option value="">Select</option>
                               <option value="NAME">Name</option>
                               <option value="DESIGNATION">Designation</option>
-                              <option value="MOBILE_NO">Contact</option>
-                              <option value="EMAIL_ID">Email</option>
-                              <option value="COUNTRY">Country</option>
+                              <!-- <option value="MOBILE_NO">Contact</option> -->
+                              <!-- <option value="EMAIL_ID">Email</option> -->
+                              <!-- <option value="COUNTRY">Country</option> -->
                               <option value="ADDRESS">Address</option>
-                              <option value="WEBSITE">Website</option>
+                              <!-- <option value="WEBSITE">Website</option> -->
                             </select>
                           </td>
                         </tr>
@@ -534,11 +317,11 @@
                               <option value="">Select</option>
                               <option value="NAME">Name</option>
                               <option value="DESIGNATION">Designation</option>
-                              <option value="MOBILE_NO">Contact</option>
-                              <option value="EMAIL_ID">Email</option>
-                              <option value="COUNTRY">Country</option>
+                              <!-- <option value="MOBILE_NO">Contact</option> -->
+                              <!-- <option value="EMAIL_ID">Email</option> -->
+                              <!-- <option value="COUNTRY">Country</option> -->
                               <option value="ADDRESS">Address</option>
-                              <option value="WEBSITE">Website</option>
+                              <!-- <option value="WEBSITE">Website</option> -->
                             </select>
                           </td>
                         </tr>
@@ -550,11 +333,11 @@
                               <option value="">Select</option>
                               <option value="NAME">Name</option>
                               <option value="DESIGNATION">Designation</option>
-                              <option value="MOBILE_NO">Contact</option>
-                              <option value="EMAIL_ID">Email</option>
-                              <option value="COUNTRY">Country</option>
+                              <!-- <option value="MOBILE_NO">Contact</option> -->
+                              <!-- <option value="EMAIL_ID">Email</option> -->
+                              <!-- <option value="COUNTRY">Country</option> -->
                               <option value="ADDRESS">Address</option>
-                              <option value="WEBSITE">Website</option>
+                              <!-- <option value="WEBSITE">Website</option> -->
                             </select>
                           </td>
                         </tr>
@@ -566,11 +349,11 @@
                               <option value="">Select</option>
                               <option value="NAME">Name</option>
                               <option value="DESIGNATION">Designation</option>
-                              <option value="MOBILE_NO">Contact</option>
-                              <option value="EMAIL_ID">Email</option>
-                              <option value="COUNTRY">Country</option>
+                              <!-- <option value="MOBILE_NO">Contact</option> -->
+                              <!-- <option value="EMAIL_ID">Email</option> -->
+                              <!-- <option value="COUNTRY">Country</option> -->
                               <option value="ADDRESS">Address</option>
-                              <option value="WEBSITE">Website</option>
+                              <!-- <option value="WEBSITE">Website</option> -->
                             </select>
                           </td>
                         </tr>
@@ -600,3 +383,12 @@
   </div>
 </div>
 <!-- //discounts-->
+
+<div *ngIf="pageLoader">
+  <div class="pageLoader">
+      <div class="pageLoaderContent">
+      <div class="loaderImage"><img src="../../../assets/images/spinnerLoader.gif"></div>
+      <!-- <div class="laderContent">Loading...</div> -->
+      </div>
+  </div>
+</div>

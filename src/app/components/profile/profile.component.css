@@ -82,8 +82,10 @@ body, html {
 #uploadNew table tbody tr td input{width:95%;}
 #uploadNew .modal-dialog{width:850px;margin: 50px auto;}
 #uploadNew .modal-footer{border-top:2px solid #ddd;clear: left;}
+#uploadNew  .close{position: absolute;right: 10px; width: 33px;top: 22px;}
+#uploadNew  input[type="file"] {display: block;padding: 10px 20px 0;}
 
-.uploadSec{background: #f7f7f7;clear: both;     height: 320px;padding:10px;}
+.uploadSec{background: #f7f7f7;clear: both; height: 320px;padding:10px;}
 .uploadSec .imageSec{height: 266px;}
 .uploadSec .btnSec input{margin: 0 auto; display: block;}
 .discount h3{padding: 0;margin: 0;}
@@ -92,3 +94,16 @@ body, html {
 .loaderSec span{position: absolute;top:200px;font-size:14px;text-align: center;padding-left: 194px;color:#666;}
 .loaderSec img{width: 50%;opacity: 0.3;margin: 50px auto 0;display: block;}
 .blankTable img{width: 20%;opacity: 0.3;margin: 120px auto 0;display: block;}
+
+.card { box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); width: 24%; margin: 0.5%; text-align: center; font-family: arial;padding-bottom:0;}
+.card h1{font-size:20px;}
+.title { color: grey; font-size: 16px;}
+button { border: none; outline: 0; display: inline-block; padding: 8px; color: white; background-color: #000; text-align: center; cursor: pointer;
+  width: 100%; font-size: 18px;margin-top:10px;}
+/* a { text-decoration: none; font-size: 22px; color: black;} */
+button:hover, a:hover {opacity: 0.7;}
+.addSec{margin-top:10px;}
+.addLeft{text-align:right;font-weight: 600;color: #555;font-size: 13px;}
+.addRight{text-align:left;font-weight:500;font-size: 13px;}
+.addSec{height: 54px;}
+#uploadimg{width: 100%;padding: 20px 5%;}

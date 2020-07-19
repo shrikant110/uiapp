@@ -22,6 +22,10 @@ export class ProfileComponent implements OnInit {
   savedata:saveDto = new saveDto();
   blankTable:boolean=true;
   loaderSec:boolean=false;
+  pageLoader:boolean=false;
+  searchSec:boolean=false;
+
+
   constructor(public authService: AuthService, public router: Router,public dashboard:DashboardService,public http: HttpClient,public uploadserv:UploadService) {
     this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
      this.dashboard.getModules() ;
@@ -56,6 +60,7 @@ export class ProfileComponent implements OnInit {
   uploadNewShow(){
     this.uploadNew=true;
     this.scannedData=[];
+    this.showTable=false;
     this.savedata=new saveDto();
   }
   uploadNewHide(){
@@ -65,6 +70,7 @@ export class ProfileComponent implements OnInit {
   fileString:any='';
   fileObject:any=null;
   errorFlag:boolean = false;
+  // imgFlag:boolean=false;
   errorMsg:any="Please check the file uploaded !";
   fileUpload(event){
     this.fileString='';
@@ -77,10 +83,40 @@ export class ProfileComponent implements OnInit {
        this.fileObject = files[0];
        this.fileString = files[0].name;
     }
+    // this.imgFlag=true;
     console.log("uploaded file name -->"+this.fileString+" fileObject -->"+this.fileObject);
+
+    document.getElementById('uploadimg').setAttribute( 'src', event.target.files[0] );
+
   }
+
+  public imagePath;
+  imgURL: any="../../../assets/images/card-placeholder.jpg";
+  public message: string;
+
+  preview(files) {
+    if (files.length === 0)
+      return;
+
+    var mimeType = files[0].type;
+    if (mimeType.match(/image\/*/) == null) {
+      this.message = "Only images are supported.";
+      return;
+    }
+
+    var reader = new FileReader();
+    this.imagePath = files;
+    reader.readAsDataURL(files[0]);
+    reader.onload = (_event) => {
+      this.imgURL = reader.result;
+    }
+  }
+
+
+
   showTable:boolean=false;
   scannedData:any;
+  scannedImage:any;
   scandataTmp:any=[];
   uploadFile(){
     console.log(this.fileObject+" ==> "+this.fileString+" ==>");
@@ -90,6 +126,8 @@ export class ProfileComponent implements OnInit {
       this.uploadserv.upload(this.fileString,this.fileObject).subscribe((obj:any)=>{
         if(obj.ResponseCode=="200"){
           this.scannedData=obj.Data.scanMaster;
+          // this.scannedImage=obj.Data.scanMaster.scanImage.pic;
+          this.scannedImage = window.URL.createObjectURL(obj.Data.scanMaster.scanImage.pic);
           this.showTable=true;
           this.blankTable=false;
           this.loaderSec=false;
@@ -117,7 +155,7 @@ export class ProfileComponent implements OnInit {
             this.scandataTmp.push(tmp);
 
             this.savedata.mapperObject=this.scandataTmp;
-          console.log("this.scandataTmp1"+JSON.stringify(this.scandataTmp))
+          console.log("this.scannedImage"+JSON.stringify(this.scannedImage))
 
           // for (var key in obj.Data.scanMaster) {
           //   let i=0
@@ -150,12 +188,40 @@ export class ProfileComponent implements OnInit {
   }
 
   saveAll(){
+    this.pageLoader=true;
     this.uploadserv.mapping(this.savedata).subscribe((obj:any)=>{
       if(obj.ResponseCode=="200"){
         this.uploadNew=false;
         this.scannedData=[];
+        this.pageLoader=false;
+      }else{
+        this.pageLoader=false;
       }
     })
   }
+
+  searchVal:any;
+
+  getSearchValue(value,event){
+    this.searchVal=value;
+    console.log("search val - "+this.searchVal);
+  }
+fetchedData:any=[];
+  searchData(){
+    this.pageLoader=true;
+    this.uploadserv.records(this.searchVal).subscribe((obj:any)=>{
+      if(obj.ResponseCode==200){
+        this.fetchedData=obj.Data;
+        this.pageLoader=false;
+        this.searchSec=true;
+      }else{
+        this.pageLoader=false;
+      }
+    })
+  }
+
+
+
+
 
 }

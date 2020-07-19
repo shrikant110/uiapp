@@ -32,4 +32,10 @@ export class UploadService {
       let result = this.http.post(environment.API_URL + 'vc/set/mapping',saveObject).map((response: Response) => response );
     return result;
   }
+
+  public records(searchString) {
+      let result = this.http.get(environment.API_URL + 'vc/scan/records/'+searchString).map((response: Response) => response );
+    return result;
+  }
+
 }
