@@ -62,6 +62,7 @@ export class ProfileComponent implements OnInit {
     this.scannedData=[];
     this.showTable=false;
     this.savedata=new saveDto();
+    this.imgURL="../../../assets/images/card-placeholder.jpg";
   }
   uploadNewHide(){
     this.uploadNew=false;
